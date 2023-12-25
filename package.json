@@ -1,7 +1,7 @@
 {
   "name": "book-store",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is book store website",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/styles.css -w"

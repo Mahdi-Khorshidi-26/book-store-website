@@ -1,0 +1,29 @@
+// resets
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.container {
+  max-width: 1300px;
+  display: block;
+  margin: 0 auto;
+}

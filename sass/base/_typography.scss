@@ -1,0 +1,23 @@
+@import "../abstracts/variables";
+
+@font-face {
+  src: url("../../assests/fonts/fa-brands-400.woff2");
+  font-family: $font-fa-brand;
+}
+@font-face {
+  src: url("../../assests/fonts/fa-solid-900.woff2");
+  font-family: $font-fa-solid;
+}
+@font-face {
+  src: url("../../assests/fonts/themify.woff");
+  font-family: $font-themify;
+}
+@font-face {
+  font-family: $font-roboto;
+  src: url("../../assests/fonts/Roboto-Light.ttf");
+}
+
+body {
+  font-family: $font-roboto;
+  font-size: 63%;
+}

@@ -1,0 +1,30 @@
+.header-main {
+  background-color: $main-bg-color;
+  min-height: 100vh;
+}
+// FIX make  "menu" and "como to top button" to appear when the screen is approximately 35% scrolled
+.header-menu {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  .header-menu-list {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 2px;
+    grid-template-columns: repeat(6, 100px);
+    .header-menu-item {
+      .header-menu-item-link {
+        display: inline-block;
+        padding: 20px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        transition: 0.2s;
+        &:hover {
+          color: $main-color;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}

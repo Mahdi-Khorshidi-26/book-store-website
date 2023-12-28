@@ -1,10 +1,16 @@
+// variables
+@import "abstracts/variables";
 //resets
 @import "base/base";
 // typography
 @import "base/typography";
+// animations
+@import "base/animations";
+// mixins
+@import "abstracts/mixins";
+//buttons
+@import "components/buttons";
 //header layout
 @import "layout/header";
 //pages
 @import "pages/home";
-//buttons
-@import "components/buttons";

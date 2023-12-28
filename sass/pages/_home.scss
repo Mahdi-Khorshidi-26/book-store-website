@@ -1,8 +1,11 @@
+//header
 .header-main {
   background-color: $main-bg-color;
-  min-height: 100vh;
+  min-height: 180vh;
 }
 // FIX make  "menu" and "como to top button" to appear when the screen is approximately 35% scrolled
+// FIX animations for sliders and book list of selling
+// FIX button animations
 .header-menu {
   display: grid;
   justify-items: center;
@@ -26,5 +29,213 @@
         }
       }
     }
+    .pages {
+      z-index: 5;
+      position: relative;
+      .sub-menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 60px;
+        left: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border: none;
+        outline: none;
+        min-width: 170px;
+        .sub-menu-items {
+          .sub-menu-links {
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0px;
+            padding-left: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            position: relative;
+            transition: 0.5s;
+            letter-spacing: 0px;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              background-color: transparent;
+            }
+            &:hover {
+              transition: 0.5s;
+              letter-spacing: 1px;
+              color: $main-color;
+            }
+          }
+        }
+      }
+      &:hover .sub-menu {
+        display: block;
+        @include animation(show-submenu);
+      }
+    }
   }
+}
+.header-hero {
+  box-shadow: 1px 2px 5px black;
+  overflow: hidden;
+  position: relative;
+  .slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    @include slider-animation(show-slider);
+    .slide {
+      color: white;
+      position: relative;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      .slider-text {
+        position: absolute;
+        text-align: center;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-row-gap: 50px;
+        .category-btn {
+          background-color: #fff;
+          color: black;
+          font-size: 0.9rem;
+          border-radius: 50px;
+          padding: 5px 15px;
+        }
+        .hero-slider-title {
+          font-size: 4rem;
+          font-family: $font-fa-brand;
+        }
+      }
+    }
+  }
+  .dots {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    display: flex;
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-right: 15px;
+      border: none;
+      outline: none;
+    }
+  }
+  margin-bottom: 100px;
+}
+.header-body {
+  .hero-main-title {
+    text-align: center;
+    font-size: 2rem;
+    font-family: $font-fa-brand;
+    margin-bottom: 100px;
+    font-weight: 600;
+  }
+  .book-slider {
+    margin-bottom: 250px;
+    max-height: 445px;
+    position: relative;
+    .book-slider-wrapper {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      position: relative;
+      grid-row-gap: 15px;
+      .fa-angle-left {
+        position: absolute;
+        font-size: 3rem;
+        color: #888;
+        top: 50%;
+        left: -23px;
+        font-weight: 500;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          transition: 0.3s;
+          color: $main-color;
+        }
+      }
+      .fa-angle-right {
+        position: absolute;
+        font-size: 3rem;
+        color: #888;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%);
+        font-weight: 500;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          transition: 0.3s;
+          color: $main-color;
+        }
+      }
+
+      .book-item {
+        width: 200px;
+        box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.1);
+        display: grid;
+        align-items: center;
+        grid-row-gap: 10px;
+        background-color: #fff;
+        .book-title {
+          font-family: $font-roboto-bold;
+          font-size: 1rem;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+        .book-author {
+          font-size: 0.8rem;
+          color: #888;
+          margin-top: 3px;
+          margin-bottom: 10px;
+          margin-left: 10px;
+        }
+        .book-rating-item-group {
+          margin-left: 10px;
+          font-size: 0.9rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-areas:
+            "rate price"
+            "review price";
+          align-items: center;
+          margin-bottom: 15px;
+          .book-rating-stars {
+            grid-area: rate;
+            .fa {
+              color: $book-item-coloring;
+            }
+          }
+          .book-review {
+            grid-area: review;
+            font-size: 0.8rem;
+            padding-left: 5px;
+            color: #888;
+            .book-review-num {
+              color: $book-item-coloring;
+            }
+          }
+          .book-price {
+            grid-area: price;
+            color: $main-color;
+            font-size: 1.3rem;
+            font-family: $font-roboto-bold;
+          }
+        }
+      }
+    }
+  }
+}
+// main
+.main {
+  padding-top: 100px;
+  background-color: #fff;
 }

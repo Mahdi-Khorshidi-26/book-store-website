@@ -16,7 +16,10 @@
   font-family: $font-roboto;
   src: url("../../assests/fonts/Roboto-Light.ttf");
 }
-
+@font-face {
+  font-family: $font-roboto-bold;
+  src: url("../../assests/fonts/Roboto-Medium.ttf");
+}
 body {
   font-family: $font-roboto;
   font-size: 63%;

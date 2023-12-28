@@ -1,0 +1,6 @@
+@mixin animation($name) {
+  animation: $name 0.35s linear 0s 1 alternate forwards;
+}
+@mixin slider-animation($name) {
+  animation: $name 15s ease 0.5s infinite;
+}

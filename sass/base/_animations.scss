@@ -1,4 +1,4 @@
-@keyframes show-submenu {
+@keyframes submenu-in {
   0% {
     transform: translateY(-10%);
     opacity: 0;
@@ -20,6 +20,37 @@
     opacity: 1;
   }
 }
+.submenu-in {
+  animation: submenu-in 0.35s linear 0s 1 alternate forwards;
+}
+
+@keyframes submenu-out {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-4%);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateY(-6%);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-8%);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+}
+
+.submenu-out {
+  animation: submenu-out 0.4s linear 0s 1 alternate forwards;
+}
+
 @keyframes show-slider {
   0% {
     transform: translateX(0%);

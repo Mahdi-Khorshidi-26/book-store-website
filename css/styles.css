@@ -10,7 +10,7 @@ html {
 
 a,
 a:link,
-a:visited {
+a:active a:visited {
   text-decoration: none; }
 
 ul,
@@ -50,7 +50,7 @@ body {
   font-family: "roboto";
   font-size: 63%; }
 
-@keyframes show-submenu {
+@keyframes submenu-in {
   0% {
     transform: translateY(-10%);
     opacity: 0; }
@@ -66,6 +66,29 @@ body {
   100% {
     transform: translateY(0%);
     opacity: 1; } }
+
+.submenu-in {
+  animation: submenu-in 0.35s linear 0s 1 alternate forwards; }
+
+@keyframes submenu-out {
+  0% {
+    transform: translateY(0%);
+    opacity: 1; }
+  25% {
+    transform: translateY(-4%);
+    opacity: 0.75; }
+  50% {
+    transform: translateY(-6%);
+    opacity: 0.5; }
+  75% {
+    transform: translateY(-8%);
+    opacity: 0.25; }
+  100% {
+    transform: translateY(-10%);
+    opacity: 0; } }
+
+.submenu-out {
+  animation: submenu-out 0.4s linear 0s 1 alternate forwards; }
 
 @keyframes show-slider {
   0% {
@@ -257,8 +280,7 @@ body {
             letter-spacing: 1px;
             color: #ff1616; }
       .header-menu .header-menu-list .pages:hover .sub-menu {
-        display: block;
-        animation: show-submenu 0.35s linear 0s 1 alternate forwards; }
+        display: block; }
 
 .header-hero {
   box-shadow: 1px 2px 5px black;
@@ -267,8 +289,7 @@ body {
   margin-bottom: 100px; }
   .header-hero .slider-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 100%);
-    animation: show-slider 15s ease 0.5s infinite; }
+    grid-template-columns: repeat(3, 100%); }
     .header-hero .slider-wrapper .slide {
       color: white;
       position: relative;

@@ -73,7 +73,6 @@
       }
       &:hover .sub-menu {
         display: block;
-        @include animation(show-submenu);
       }
     }
   }
@@ -85,7 +84,6 @@
   .slider-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 100%);
-    @include slider-animation(show-slider);
     .slide {
       color: white;
       position: relative;
